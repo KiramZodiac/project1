@@ -12,14 +12,11 @@ const btn = document.querySelector('#btn');
 const todos = document.querySelector('#todos');
 const save = document.querySelector('#save');
 
-
 btn.addEventListener('click',function(){
 let li = document.createElement('li')
 
 li.innerHTML = input.value
 todos.appendChild(li)
-
-
 
 li.addEventListener('click',function(){
 
@@ -32,43 +29,39 @@ save.addEventListener('click',function(){
     let p = document.createElement('p');
     p.innerHTML = input.value;
 
-
  })
-
 
  const bt = document.querySelector('bt')
 
- 
+ //setTimeout(() => {
+   // document.body.style.backgroundColor = 'red' 
+
+ //},1000);
+
+ //setTimeout(() => {
+  //  document.body.style.backgroundColor ='pink'
+//},1000 );
 
 
+const delaydColor = (color,time)=>{
 
+return new Promise((yes,no)=>{
+setTimeout(()=>{
+document.body.style.backgroundColor = color
+yes()
+},time)
 
- setTimeout(() => {
-    document.body.style.backgroundColor = 'red' 
-
- },1000);
-
-
-
- setTimeout(() => {
-    document.body.style.backgroundColor ='pink'
-},1000 );
-
-const sing = async ()=>{
-return 'alalalal'
-
-}
-sing().then((data)=>{
-console.log('function,',data)
 
 })
 
+}
 
+async function rain(){
+await delaydColor('red',2000)
+await delaydColor('pink',2000)
+await delaydColor('green',2000)
+await delaydColor('orange',2000)
 
-
-
-
-
-
-
+}
+rain()
 
