@@ -12,16 +12,7 @@ const para = document.querySelector('#para')
 
  }
 
-
- const color = red =()=>{
-return 3*3
-
- }
-
-
-
- setInterval(red,1000)
-    console.log(red())
+    console.log(timeTaken())
 
 
 
